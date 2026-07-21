@@ -1,0 +1,40 @@
+# JRK Higienização — Site
+
+Site institucional estático (HTML/CSS/JS puro, sem build step) da JRK Higienização, empresa de higienização profissional de estofados em Manaus/AM.
+
+## Estrutura
+
+```
+├── index.html              → página inicial
+├── assets/
+│   ├── css/
+│   │   ├── main.css         → estilos compartilhados (header, footer, botões)
+│   │   └── blog.css         → estilos específicos do blog
+│   └── img/                 → imagens (fotos reais de atendimentos, logo)
+└── blog/
+    ├── index.html            → índice do blog
+    └── *.html                → artigos individuais
+```
+
+## Convenções importantes
+
+- **Todos os links internos usam caminhos absolutos** (começando com `/`), nunca relativos. Isso evita quebra de navegação causada por normalização de URL em diferentes hospedagens (ex: remoção de barra final em `/blog/`).
+- Site sem framework/build — pode ser hospedado em qualquer serviço de arquivos estáticos (Vercel, Netlify, GitHub Pages, cPanel) sem configuração especial.
+- Paleta de marca: azul claro `#DFF4FF`, azul profundo `#1F4E79`, cinza técnico `#334155`.
+
+## Deploy
+
+### Vercel (recomendado — conectar este repositório)
+1. No painel da Vercel, importar este repositório GitHub
+2. Framework Preset: **Other**
+3. Build Command: (deixar vazio)
+4. Output Directory: `.` (raiz)
+5. Cada `git push` na branch principal publica automaticamente
+
+### Deploy manual (Netlify, cPanel, etc.)
+Basta enviar o conteúdo desta pasta (mantendo a estrutura) para a raiz pública do servidor.
+
+## Contato
+- WhatsApp: (92) 98195-6951
+- E-mail: jrkhigienizacao@gmail.com
+- Domínio: jrkhigienizacao.com.br
